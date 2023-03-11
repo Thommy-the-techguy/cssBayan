@@ -100,6 +100,8 @@ header h1 {
 .icon img {
     width: 25px;
     height: 25px;
+    transform: rotateZ(0deg);
+    transition: 1s;
 }
 
 .icon {
@@ -107,4 +109,18 @@ header h1 {
     top: 24px;
     right: 0;
     cursor: pointer;
+}
+
+.panel label input:checked ~ .icon img {
+    transform: rotateZ(315deg);
+    transition: 1s;
+}
+
+.panel:hover label input:checked ~ img {
+    transform: rotateZ(0deg);
+}
+
+.panel:hover label .icon img {
+    transform: rotateZ(315deg);
+    transition: 1s;
 }
