@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 body {
     background-color: beige;
 }
@@ -21,37 +25,32 @@ header h1 {
     left: 50%;
     transform: translateX(-50%);
     width: 800px;
-    overflow: hidden;
     transition: 1s;
 }
 
-.panel .content h2 {
+.panel label .content h2 {
     font-weight: bold;
     font-size: 25px;
+    color: rgb(15, 116, 217);
 }
 
-.panel button {
-    position: absolute;
-    top: 0;
-    right: 200px;
-}
-
-.panel .content {
+.panel label .content {
     border-top: 1px solid rgb(156, 156, 156);
-    height: 50px;
     transition: 1s;
+    height: 71px;
+    cursor: pointer;
 }
 
-.panel .content img {
+.panel label .content img {
     position: absolute;
     width: 0px;
     height: 0px;
     left: 50%;
     transform: translateX(-50%);
-    transition: 1s;
+    transition: 0.4s;
 }
 
-.panel input {
+.panel label input {
     position: absolute;
     left: -9999px;
 }
@@ -66,8 +65,45 @@ header h1 {
     transition: 1s;
 }
 
-.panel:hover .content img {
+.panel:hover label .content img {
     height: 300px;
     width: 320px;
     transition: 1s;
+}
+
+.panel label input:checked ~ .content {
+    height: 380px;
+    transition: 1s;
+}
+
+.panel label input:checked ~ .content img {
+    height: 300px;
+    width: 320px;
+    transition: 1s;
+}
+
+.panel label input:checked ~ .content h2 {
+    color: black;
+}
+
+.accordion {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.accordion:hover .panel label .content h2 {
+    color: black;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.icon {
+    position: absolute;
+    top: 24px;
+    right: 0;
 }
