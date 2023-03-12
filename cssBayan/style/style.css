@@ -55,22 +55,6 @@ header h1 {
     left: -9999px;
 }
 
-.panel:hover{
-    overflow: visible;
-    transition: 1s;
-}
-
-.panel:hover .content{
-    height: 23.75rem;
-    transition: 1s;
-}
-
-.panel:hover label .content img {
-    height: 18.75rem;
-    width: 20rem;
-    transition: 1s;
-}
-
 .panel label input:checked ~ .content {
     height: 23.75rem;
     transition: 1s;
@@ -93,10 +77,6 @@ header h1 {
     transform: translateX(-50%);
 }
 
-.accordion:hover .panel label .content h2 {
-    color: black;
-}
-
 .icon img {
     width: 1.56rem;
     height: 1.56rem;
@@ -116,24 +96,15 @@ header h1 {
     transition: 1s;
 }
 
-.panel:hover label input:checked ~ img {
-    transform: rotateZ(0deg);
-}
-
-.panel:hover label .icon img {
-    transform: rotateZ(315deg);
-    transition: 1s;
-}
-
 @media (max-width: 1920px) and (max-height: 1080px) {
     html {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 820px) and (max-height: 1180px) {
     html {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     header {
@@ -182,5 +153,36 @@ header h1 {
 
     .panel label input:checked ~ .content {
         height: 25.75rem;
+    }
+}
+
+@media (hover: hover) {
+    .panel:hover label input:checked ~ img {
+        transform: rotateZ(0deg);
+    }
+    
+    .panel:hover label .icon img {
+        transform: rotateZ(315deg);
+        transition: 1s;
+    }
+
+    .accordion:hover .panel label .content h2 {
+        color: black;
+    }
+
+    .panel:hover{
+        overflow: visible;
+        transition: 1s;
+    }
+    
+    .panel:hover .content{
+        height: 23.75rem;
+        transition: 1s;
+    }
+    
+    .panel:hover label .content img {
+        height: 18.75rem;
+        width: 20rem;
+        transition: 1s;
     }
 }
